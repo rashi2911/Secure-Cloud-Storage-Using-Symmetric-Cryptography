@@ -1,0 +1,115 @@
+<html>
+	
+<head>
+    <meta charset="utf-8">
+    <title>Cloud Security Management</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <h1 class="m-0 display-5 text-capitalize font-italic"><span class="text-primary">Crypto</span>Cloud</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="static/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-primary m-0">Secure Your Data</h4>
+                        <h4 class="display-4 m-0 mt-2 mt-md-3 text-white">Secure Data Storage and Transfer</h4>
+                        <b><p style="color:rgb(204, 219, 193); font-size:50px">SUCCESS</p></b>
+					</div>
+                </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+    <div class="container pt-5">
+		<center>
+			<table>
+				<tr>
+					<td><a href='return-file' target="blank"><button>Download File</button></a></td>
+					<td><a href='home'><button>Back to HOME</button></a></td>
+				</tr>
+			</table>
+	</center>
+    </div>
+    {% for file in files %}
+    <div> {{file.original_filename}}-<a href="https://{{file.bucket}}.s3.{{file.region}}.amazonaws.com/{{file.filename}}">{{file.filename}}</a></div>
+    {% endfor %}
+    <!-- Features End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="mb-3 display-5 text-capitalize font-italic text-white"><span class="text-primary">Crypto</span>Cloud</h1>
+                <p class="m-0"></p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>UPES Bidholi, Dehradun</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 9908765784</p>
+                        <p><i class="fa fa-envelope mr-2"></i>upes@ddn.ac.in</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">
+                    &copy; <a class="text-white font-weight-bold" href="#">CryptoCloud.com</a>. All Rights Reserved. 
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</html>
+
+
+<!-- <html>
+	<body>
+		<center>
+			<h1> Secure File Storage Using Hybrid Cryptography </h1><br><br>
+			<b><p style="color:green; font-size:50px">SUCCESS</p></b>
+			<table>
+				<tr>
+					<td><a href='return-file' target="blank"><button>Download File</button></a></td>
+					<td><a href='home'><button>Back to HOME</button></a></td>
+				</tr>
+			</table>
+			<br><h4>A Project by:</h4>
+			<h5>Shivang Srivastava<br>B.Tech (CSE)<br>GE-152010678</h5>
+		</center>
+	</body>
+</html> -->

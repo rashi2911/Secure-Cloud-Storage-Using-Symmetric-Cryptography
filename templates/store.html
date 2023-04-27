@@ -1,0 +1,79 @@
+<html>
+	
+<head>
+    <meta charset="utf-8">
+    <title>Cloud Security Management</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-white">
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <h1 class="m-0 display-5 text-capitalize font-italic"><span class="text-primary">Crypto</span>Cloud</h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="static/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-primary m-0">Secure Your Data</h4>
+                        <h4 class="display-4 m-0 mt-2 mt-md-3 text-white">Secure Data Storage and Transfer</h4>
+                       <!-- <h3 class="display-4 m-0 mt-2 mt-md-3 text-white"> View and Upload your files</h3> -->
+                       <a href="upload" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4">Upload File</a>
+                        <a href="download" class="btn btn-lg btn-primary mt-4 mt-md-3 px-5">Decrypt/Restore File</a>
+                       <b><p style="color:rgb(204, 219, 193); font-size:50px">View and Upload your files to secure cloud</p></b>
+					</div>
+                </div>
+        </div>
+    </div>
+    <div class="container pt-5">
+<center>
+    <form method="POST" enctype="multipart/form-data" style="margin-bottom: 30px;">
+        <input type="file" name="file-to-save" />
+        <button>Upload</button>
+    </form>
+    <p></p>
+    <br>
+    <br>
+</center>
+</div>
+    
+<b><p style="color:rgb(29, 69, 231); font-size:30px">Download and view your files</p></b>
+
+    {% for file in files %}
+    <div class="container pt-5">
+
+        {{ file.original_filename }} - <a href="https://{{ file.bucket }}.s3.{{ file.region }}.amazonaws.com/{{ file.filename }}">{{ file.filename }}</a>
+    <br>
+   
+    </div>
+    
+    {% endfor %}
+</body>
+</html>
