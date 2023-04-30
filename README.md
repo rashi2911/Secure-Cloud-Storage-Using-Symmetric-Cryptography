@@ -1,5 +1,6 @@
 # Secure-Cloud-Storage-Using-Symmetric-Cryptography
 This is a web application that would help the users to store their data securely on cloud by using different encryption algorithms .The method involves encrypting a file , then decrypt it with a private key. The files can be stored by the user on cloud (AWS S3) and viewed and downloaded. The website is also secured using AWS WAF.
+The website is deployed using AWS EC2 service and an application load balancer is configured to manage the traffic on the website.
 
 Website Interface:
 ![image](https://user-images.githubusercontent.com/107244393/234979365-1a62107b-7798-4e46-827f-8967a066145b.png)
